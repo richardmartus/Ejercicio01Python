@@ -27,3 +27,7 @@ Se requiere un programa en Java para convertir una cantidad de dinero en otros t
   +----------+---------------+---------------------+----------------+
   
   ~~~
+## Etapa 03. Diseño la solución
+## Etapa 04. Desarrollo de la solución
+## Etapa 05. Depuración y Pruebas
+## Etapa 06. Documentación
