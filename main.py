@@ -1,17 +1,12 @@
-class Participant:
-    def __init__(self, name, dinero):
-        self.name = name
+class Movimiento:
+    def __init__(self, identificador):
+        self.identificador = identificador
         self.choice = ""
-        self.dinero = dinero
-        self.choicedinero = ""
 
     def choose(self):
-        self.choice = input("{name}, seleccione entre las opciones UY, MX, US, CO, BR, AR : ".format(name=self.name))
-        print("{name} seleccionada fue {choice}".format(name=self.name, choice=self.choice))
-
-    def choosecantidad(self):
-        self.choicedinero= input("Indique la cantidad a convertir : ".format(name=self.dinero))
-        print("La cantidad de dinero a convertir es {choicedinero}".format(choicedinero=self.dinero))
+        self.choice = input("{identificador}, seleccione entre las opciones UY, MX, US, CO, BR, AR : ".format(
+            identificador=self.identificador))
+        print("{identificador} fue seleccionada  {choice}".format(identificador=self.identificador, choice=self.choice))
 
     def toNumericalChoice(self):
         switcher = {
@@ -22,12 +17,11 @@ class Participant:
             "BR": 4,
             "AR": 5
         }
-
         return switcher[self.choice]
 
 
-class GameRound:
-    def __init__(self, p1, p2, c12):
+class ConversorMoneda:
+    def __init__(self, p1, p2, p3):
         self.rules = [
             [1, 0.48, 0.026, 121.5, 0.14, 4.86],
             [2.09, 1, 0.053, 253.12, 0.28, 10.13],
@@ -39,25 +33,48 @@ class GameRound:
         p1.choose()
         p2.choose()
         result = self.compareChoices(p1, p2)
-        print("El factor de conversión de moneda es {result}".format(result=self.getResultAsString(result)))
+        print("El factor de conversión de monedas es de {result}".format(result=self.getResultAsString(result)))
+
+        conversion = float(p3) * result
+        print("El resultado de la conversión es {conversion}".format(conversion=self.getResultAsString(conversion)))
 
     def compareChoices(self, p1, p2):
         return self.rules[p1.toNumericalChoice()][p2.toNumericalChoice()]
 
     def getResultAsString(self, result):
-        res = str(result)
-        return res
+        return result
 
 
-class Game:
+class Conversion:
     def __init__(self):
-        self.endGame = False
-        self.participant = Participant("La moneda de entrada")
-        self.secondParticipant = Participant("La moneda de salida")
+        self.endConversion = False
+        self.Movimiento = Movimiento("Para la moneda de entrada")
+        self.secondMovimiento = Movimiento("Para la moneda de salida")
+        self.moneda = input("Ingrese la cantidad a convertir : ", )
+        print("La cantidad ingresada fue " + str(self.moneda))
+        if int(self.moneda) < 0:
+            print("La cantidad introducida es negativa. Hasta luego!!")
+            self.endConversion = True
 
     def start(self):
-        game_round = GameRound(self.participant, self.secondParticipant)
+        while not self.endConversion:
+            ConversorMoneda(self.Movimiento, self.secondMovimiento, self.moneda)
+            self.checkEndCondition()
+
+    def checkEndCondition(self):
+        answer = input("Quiere hacer otra operación s/n: ")
+        if answer == 's':
+            self.moneda = input("Ingrese la cantidad a convertir : ", )
+            print("La cantidad ingresada fue " + str(self.moneda))
+            if int(self.moneda) < 0:
+                print("La cantidad introducida es negativa. Hasta luego!!")
+                self.endConversion = True
+            ConversorMoneda(self.Movimiento, self.secondMovimiento, self.moneda)
+            self.checkEndCondition()
+        else:
+            print("Gracias por utilizar la aplicación. Hasta luego!!")
+            self.endConversion = True
 
 
-game = Game()
-game.start()
+Conversion = Conversion()
+Conversion.start()
