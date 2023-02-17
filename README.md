@@ -29,6 +29,7 @@ Se requiere un programa para convertir una cantidad de dinero en otros tipos de 
   
   ~~~
 ## Etapa 03. Diseño la solución
+![Diagrama de clases](venv/Diagrama de clases01.png)
 
 ## Etapa 04. Desarrollo de la solución
 ## Etapa 05. Depuración y Pruebas
