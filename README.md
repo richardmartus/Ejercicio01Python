@@ -13,7 +13,7 @@ Se requiere un programa para convertir una cantidad de dinero en otros tipos de 
   Solicitar cantidad a convertir
   Solicitar moneda a convertir
   Solicitar moneda para procesar conversión
-  
+   
   Si el monto es mayor o igual que cero entonces se convertirá a la moneda deseada
   Si el monto es menor que cero entonces se cancela la operación
  
