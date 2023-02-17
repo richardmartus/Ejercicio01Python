@@ -1,16 +1,16 @@
 # Ejercicio01-T1A1
 ## Etapa 01. Descripción del problema
-Se requiere un programa en Java para convertir una cantidad de dinero en otros tipos de monedas (al menos a cinco tipos de monedas distintas). 
+Se requiere un programa para convertir una cantidad de dinero en otros tipos de monedas (al menos a cinco tipos de monedas distintas). 
 ## Etapa 02. Definición de la solución
 ~~~ Entrada
-  float cantidad
-  String moneda1, moneda2, moneda3, moneda4, moneda5
+  float moneda, conversion
+  String Movimiento, secondMovimiento, answer
   double conversion
+  bool endConversion
   
 - Proceso
-
-  Solicitar moneda a convertir
   Solicitar cantidad a convertir
+  Solicitar moneda a convertir
   Solicitar moneda para procesar conversión
   
   Si el monto es mayor o igual que cero entonces se convertirá a la moneda deseada
@@ -18,13 +18,13 @@ Se requiere un programa en Java para convertir una cantidad de dinero en otros t
  
 - Salida
   
-  +----------+---------------+---------------------+----------------+
-  | CANTIDAD | MONEDA ORIGEN | CANTIDAD CONVERTIDA | MONEDA DESTINO |
-  +----------+---------------+---------------------+----------------+
-  |       10 |          DLLS |              189.79 |            MXN |
-  +----------+---------------+---------------------+----------------+
-  |       10 |          DLLS |             0.00043 |            BTC |
-  +----------+---------------+---------------------+----------------+
+  +----------+---------------+---------------------+------------------+
+  | CANTIDAD | MONEDA ORIGEN |    MONEDA DESTINO   | CANT. CONVERTIDA |
+  +----------+---------------+---------------------+------------------+
+  |    1000  |       UY      |        US           |       26.0       |
+  +----------+---------------+---------------------+------------------+
+  |    1000  |       UY      |        BR           |      140.0       |
+  +----------+---------------+---------------------+------------------+
   
   ~~~
 ## Etapa 03. Diseño la solución
