@@ -7,6 +7,7 @@ Se requiere un programa para convertir una cantidad de dinero en otros tipos de 
   String Movimiento, secondMovimiento, answer
   double conversion
   bool endConversion
+  list rules
   
 - Proceso
   Solicitar cantidad a convertir
@@ -28,6 +29,7 @@ Se requiere un programa para convertir una cantidad de dinero en otros tipos de 
   
   ~~~
 ## Etapa 03. Diseño la solución
+
 ## Etapa 04. Desarrollo de la solución
 ## Etapa 05. Depuración y Pruebas
 ## Etapa 06. Documentación

@@ -52,7 +52,7 @@ class Conversion:
         self.secondMovimiento = Movimiento("Para la moneda de salida")
         self.moneda = input("Ingrese la cantidad a convertir : ", )
         print("La cantidad ingresada fue " + str(self.moneda))
-        if int(self.moneda) < 0:
+        if float(self.moneda) < 0.0:
             print("La cantidad introducida es negativa. Hasta luego!!")
             self.endConversion = True
 
@@ -66,7 +66,7 @@ class Conversion:
         if answer == 's':
             self.moneda = input("Ingrese la cantidad a convertir : ", )
             print("La cantidad ingresada fue " + str(self.moneda))
-            if int(self.moneda) < 0:
+            if float(self.moneda) < 0.0:
                 print("La cantidad introducida es negativa. Hasta luego!!")
                 self.endConversion = True
             ConversorMoneda(self.Movimiento, self.secondMovimiento, self.moneda)
