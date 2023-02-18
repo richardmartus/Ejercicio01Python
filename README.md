@@ -33,5 +33,8 @@ Se requiere un programa para convertir una cantidad de dinero en otros tipos de 
 
 
 ## Etapa 04. Desarrollo de la solución
+Código disponeble en el archivo main.py
+
 ## Etapa 05. Depuración y Pruebas
+
 ## Etapa 06. Documentación
