@@ -36,5 +36,5 @@ Se requiere un programa para convertir una cantidad de dinero en otros tipos de 
 Código disponible en el archivo [main](main.py)
 
 ## Etapa 05. Depuración y Pruebas
-
-## Etapa 06. Documentación
+![Diagrama](https://github.com/richardmartus/Ejercicio01Python/blob/main/.idea/prueba1Ej01.png)
+![Diagrama](https://github.com/richardmartus/Ejercicio01Python/blob/main/.idea/prueba2Ej01.png)
