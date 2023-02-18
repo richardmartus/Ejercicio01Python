@@ -2,7 +2,7 @@
 ## Etapa 01. Descripción del problema
 Se requiere un programa para convertir una cantidad de dinero en otros tipos de monedas (al menos a cinco tipos de monedas distintas). 
 ## Etapa 02. Definición de la solución
-~~~ Entrada
+ Entrada
   float moneda, conversion
   String Movimiento, secondMovimiento, answer
   double conversion
@@ -18,7 +18,7 @@ Se requiere un programa para convertir una cantidad de dinero en otros tipos de 
   Si el monto es menor que cero entonces se cancela la operación
  
 - Salida
-  
+ ~~~ 
   +----------+---------------+---------------------+------------------+
   | CANTIDAD | MONEDA ORIGEN |    MONEDA DESTINO   | CANT. CONVERTIDA |
   +----------+---------------+---------------------+------------------+
